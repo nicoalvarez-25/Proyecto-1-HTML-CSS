@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nicolás Álvarez Rivas">
+    <meta name="description" content="Biografía y portafolio de Nicolás Álvarez">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Nicolás Álvarez Rivas</title>
+</head>
+
+<body>
+    <header>
+        <div class="titulo">
+            <h1>Portafolio</h1>
+            <h2>Nicolás Álvarez Rivas</h2>
+        </div>
+        <nav>
+            <ul id="navega1">
+                <li><a href="#sobre-mi" class="navega2">Sobre mí</a></li>
+                <li><a href="#habilidades" class="navega2">Habilidades</a></li>
+                <li><a href="#formacion" class="navega2">Formación</a></li>
+                <li><a href="#proyectos" class="navega2">Proyectos</a></li>
+                <li><a href="#contacto" class="navega2">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="sobre-mi">
+            <h2 class="titulos">Sobre mí</h2>
+            <div class="contenedor-sobre-mi">
+                <div class="texto-sobre-mi">
+                    <p>
+                        Me llamo Nicolás, tengo 23 años y vivo en Lugo. Mi trayectoria no ha sido lineal, pero cada paso me ha enseñado algo valioso. Tras cursar el Bachillerato y superar la Selectividad, me enfoqué inicialmente en la preparación de una oposición. Sin embargo, tras algún problema personal, decidí dar un giro para aprender sobre otra de mis grandes inquietudes: la tecnología
+                    <p> 
+                    <p>
+                        Este curso he comenzado a estudiar el Ciclo Superior de ASIR. Lo hago con la convicción de que es el camino correcto para mí. Al estudiar en modalidad online, aplico diariamente la constancia y la gestión del tiempo que adquirí en mi etapa anterior. Busco mi primera oportunidad para demostrar que mi motivación y mi capacidad de aprendizaje pueden aportar valor desde el primer día.
+                    </p>
+                </div>
+            
+                <figure class="imagen-sobre-mi">
+                        <img src="./Imagenes/foto_dni.jpg" alt="Foto de Nicolás tamaño carnet">
+                        <figcaption>Nicolás Álvarez</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <h2 class="titulos">Habilidades</h2>
+            <div class="contenedor-habilidades">
+
+                <article class="habilidades-caja">
+                    <h3>Técnicas (Hard Skills)</h3>
+                    <ul>
+                        <li>Sistemas Operativos: Windows, Windows Server, Ubuntu Server, Kali Linux</li>
+                        <li>Redes: Configuración básica de equipos, Cisco Packet Tracer.</li>
+                        <li>Virtualización: VirtualBox, VMware.</li>
+                        <li>Servicios de red: DNS, DHCP, Active Directory.</li>
+                        <li>Hardware:  Montaje y mantenimiento de equipos.</li>
+                    </ul>
+                </article>
+
+                <article class="habilidades-caja">
+                    <h3>Personales (Soft Skills)</h3>
+                    <ul>
+                        <li>Autonomía y Gestión del tiempo:  Perfeccionadas gracias a la exigencia de la modalidad de estudio online.</li>
+                        <li>Proactividad: Iniciativa para investigar y resolver problemas de sistemas por mi cuenta.</li>
+                        <li>Constancia y Disciplina: Hábitos sólidos de estudio y trabajo adquiridos en etapas anteriores. </li>
+                        <li>Adaptabilidad: Capacidad para afrontar nuevos retos tecnológicos y aprender partiendo de la base. </li>
+                    </ul>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section id="formacion">
+            <h2 class="formacion">Formación</h2>
+            <div class="contenedor-formacion">
+                <ul>
+                    <li>Bachillerato de Ciencias Sociales
+                        IES Ánxel Fole 
+                        2018 - 2020</li>
+                    <li>Ciclo Superior de Administración de Sistemas Informáticos en Red (ASIR)
+                        Prometeo, Modalidad online
+                        2025 - Actualidad</li>
+                </ul>
+            </div>
+        </section>  
+
+        <section id="proyectos">
+            <h2 class="titulos">Proyectos</h2>
+            <div class="contenedor-proyectos">
+
+                <article class="proyectos-caja">
+                    <h3>App para vender máquinas de vending de segunda mano</h3>
+                    <p>
+                        VendingSwap es una aplicación web y móvil para comprar y vender máquinas de vending usadas. Pensada para ser fácil de usar, detrás hay una base sólida que la hace segura y rápida, gracias a conceptos clave de ASIR. Funciona sobre servidores estables, usa bases de datos eficientes para guardar toda la información y protege tus datos con buena seguridad.
+                    </p>
+                    <img src="./Imagenes/interfaz app compra-venta.png" alt="interfaz de la app para comprar y vender máquinas de segunda mano">
+                </article>
+
+                <article class="proyectos-caja">
+                    <h3>Recuperar contraseña de usuario de Windows</h3>
+                    <p>Esta metodología se basa en sustituir el archivo de Teclas Adhesivas (sethc.exe) por la Terminal de Comandos (cmd.exe) para lograr ejecutar comandos antes del inicio de sesión. El procedimiento inicia accediendo a las Opciones Avanzadas de la ventana de Recuperación de Windows para abrir la terminal. Desde ahí, se usa el Bloc de Notas para navegar a la ruta C:\Windows\System32. En esta ubicación, se localiza el archivo sethc.exe y se le cambia el nombre a sethc.bak (copia de seguridad). Inmediatamente, se localiza cmd.exe, se copia y la copia se renombra como sethc.exe. Al salir y reiniciar el sistema, el usuario debe pulsar la tecla (Shift) cinco veces en la pantalla de inicio de sesión. Esto abrirá la terminal (gracias a la sustitución). Finalmente, se utiliza el comando net user [NombreDeUsuario] [NuevaContraseña] para cambiar la contraseña del usuario sin necesidad de ingresar al sistema.</p>
+
+                    <div class="enlace-video">
+                        <p><a href="https://www.youtube.com/embed/ynFVtiI4agc">Enlace a Youtube</a></p>
+                    </div>
+                </article>
+
+                <article class="proyectos-caja">
+                    <h3>Instalar ubuntu server y windows en la misma máquina virtual</h3>
+                    <ol>
+                        <li><h4>Configuración de la MV</h4>
+                        <p>Crea una sola MV con las siguientes especificaciones: RAM: 4 GB, CPU: 2 procesadores y un Disco Duro de 40 GB (VDI).</p></li>
+                        <li><h4>Proceso de Instalación</h4>
+                            <p>Se recomienda instalar Windows primero porque su gestor de arranque es menos flexible que el de Linux:</p>
+                            <ol>
+                                <li>Instalar Windows: Arranca la MV con la ISO de Windows. Durante el particionamiento, debes reducir la partición de Windows para dejar al menos 15-20 GB de espacio SIN ASIGNAR para Ubuntu Server. Finaliza la instalación de Windows.</li>
+                                <li>Instalar Ubuntu Server: Carga la ISO de Ubuntu. En el paso de particionamiento, elige la opción "Manual".</li>
+                                <li>Particionar Linux: Utiliza el espacio sin asignar para crear las particiones de Linux: una partición Raíz (/) (formato Ext4) y una partición swap (intercambio).</li>
+                                <li>Gestor de Arranque: El instalador de Ubuntu detectará Windows y configurará automáticamente el Gestor de Arranque GRUB.</li>
+                            </ol>
+                            <p>Al finalizar, cuando inicies la MV, el menú GRUB aparecerá para que elijas arrancar Windows o Ubuntu Server.</p>
+                        </li>
+                    </ol>
+                    <img src="./Imagenes/Gemini_Generated_Image_3t0arl3t0arl3t0a.png" alt="Imagen de un monitor en el que se pueden ver ambos sistemas operativos">
+                </article>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2 id="titulos">Contacto</h2>
+            <div class="contenedor-contacto">
+                <p>Puedes contactarme a través del siguiente formulario:</p>
+
+                <form action="" class="formulario">
+
+                    <div class="grupo-inputs">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre">
+                    </div>
+
+                    <div class="grupo-inputs">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+
+                    <div class="grupo-inputs">
+                        <label for="correo-electronico">Correo electrónico:</label>
+                        <input type="email" id="correo-electronico" name="correo-electronico">
+                    </div>
+
+                    <div class="grupo-inputs">
+                        <label for="asunto">Asunto:</label>
+                        <input type="text" id="asunto" name="asunto">
+                    </div>
+
+                    <div class="grupo-inputs">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" cols="35"></textarea>
+                    </div>
+
+                    <div class="grupo-botones">
+                        <input type="reset" value="limpiar">
+                        <input type="submit" value="enviar">
+                    </div>
+                </form>
+            </div>
+
+        </section>
+
+    </main>
+                                <!-- FOOTER -->
+    <footer>
+        <div class="contenedor-footer">
+            <div >
+                <p><a href="https://github.com/nicoalvarez-25" target="_blank">GitHub</a></p>
+                <p><a href="#" target="_blank">LinkedIn</a></p>
+            </div>
+            <p>© 2026 Nicolás Álvarez Rivas | Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
