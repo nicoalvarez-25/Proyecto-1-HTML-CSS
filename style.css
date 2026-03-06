@@ -61,9 +61,13 @@ nav{
     color: white;
     text-decoration: none;
     padding: 5px 10px;
+    transition: color 0.5s;
 }
 
-
+.navega2:hover {
+    color: orange;
+    /* color: var(--color-secundario); */
+}
 
 section{
     padding: 60px 40px;
@@ -211,8 +215,12 @@ span {
     border-radius: 7px;
     margin: 15px auto 0 auto;
     display: inline-block;
+    transition: transform 0.5s;
 }
 
+.enlace-video a:hover {
+    transform: scale(1.05);
+}
 
                         /* CONTACTO Y FORMULARIO */
 
@@ -261,16 +269,21 @@ h2:last-of-type {
     color: white;
     font-weight: bold;
     cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.grupo-botones input:hover {
+    transform: scale(1.07);
 }
 
 input[type="submit"] {
     background-color: var(--color-secundario);
+    
 }
 
 input[type="reset"] {
     background-color: #3498db6d;
 }
-
 
                                 /* FOOTER */
 
@@ -286,6 +299,13 @@ footer {
     color: white;
     font-weight: bold;
     text-decoration: none;
+}
+.enlaces a {
+    transition: color 0.5s;
+}
+
+.enlaces a:hover {
+    color: orange;
 }
 
 .enlaces ul {
