@@ -112,7 +112,8 @@
 
                 <article class="proyectos-caja">
                     <h3>Recuperar contraseña de usuario de Windows</h3>
-                    <p>Esta metodología se basa en sustituir el archivo de Teclas Adhesivas (sethc.exe) por la Terminal de Comandos (cmd.exe) para lograr ejecutar comandos antes del inicio de sesión. El procedimiento inicia accediendo a las Opciones Avanzadas de la ventana de Recuperación de Windows para abrir la terminal. Desde ahí, se usa el Bloc de Notas para navegar a la ruta C:\Windows\System32. En esta ubicación, se localiza el archivo sethc.exe y se le cambia el nombre a sethc.bak (copia de seguridad). Inmediatamente, se localiza cmd.exe, se copia y la copia se renombra como sethc.exe. Al salir y reiniciar el sistema, el usuario debe pulsar la tecla (Shift) cinco veces en la pantalla de inicio de sesión. Esto abrirá la terminal (gracias a la sustitución). Finalmente, se utiliza el comando net user [NombreDeUsuario] [NuevaContraseña] para cambiar la contraseña del usuario sin necesidad de ingresar al sistema.</p>
+                    <p>Esta metodología se basa en sustituir el archivo de <strong>Teclas Adhesivas (sethc.exe)</strong> por la <strong>Terminal de Comandos (cmd.exe)</strong> para lograr ejecutar comandos antes del inicio de sesión. El procedimiento inicia accediendo a las <strong>Opciones Avanzadas</strong> de la ventana de Recuperación de Windows para abrir la terminal. Desde ahí, se usa el Bloc de Notas para navegar a la ruta <strong><code>C:\Windows\System32</code></strong>. En esta ubicación, se localiza el archivo sethc.exe y se le cambia el nombre a sethc.bak (copia de seguridad). Inmediatamente, se localiza cmd.exe, se copia y la copia se renombra como sethc.exe.</p> 
+                    <p>Al salir y reiniciar el sistema, el usuario debe pulsar la tecla <strong>Shift</strong> cinco veces en la pantalla de inicio de sesión. Esto abrirá la terminal (gracias a la sustitución). Finalmente, se utiliza el comando <strong><code>net user</code></strong> [NombreDeUsuario] [NuevaContraseña] para cambiar la contraseña del usuario sin necesidad de ingresar al sistema.</p>
 
                     <div class="enlace-video">
                         <p><a href="https://www.youtube.com/embed/ynFVtiI4agc" target="_blank">Enlace a Youtube</a></p>
@@ -122,21 +123,45 @@
                 <article class="proyectos-caja">
                     <h3>Instalar ubuntu server y windows en la misma máquina virtual</h3>
                     <ol>
-                        <strong><li><h4>Configuración de la MV</h4></li></strong>
+                        <li><h4>Configuración de la MV</h4></li>
                         <p>Crea una sola MV con las siguientes especificaciones: RAM: 4 GB, CPU: 2 procesadores y un Disco Duro de 40 GB (VDI).</p></li>
-                        <strong><li><h4>Proceso de Instalación</h4></li></strong>
+                        <li><h4>Proceso de Instalación</h4></li>
                             <p>Se recomienda instalar Windows primero porque su gestor de arranque es menos flexible que el de Linux:</p>
                             <ol>
-                                <li>Instalar Windows: Arranca la MV con la ISO de Windows. Durante el particionamiento, debes reducir la partición de Windows para dejar al menos 15-20 GB de espacio SIN ASIGNAR para Ubuntu Server. Finaliza la instalación de Windows.</li>
-                                <li>Instalar Ubuntu Server: Carga la ISO de Ubuntu. En el paso de particionamiento, elige la opción "Manual".</li>
-                                <li>Particionar Linux: Utiliza el espacio sin asignar para crear las particiones de Linux: una partición Raíz (/) (formato Ext4) y una partición swap (intercambio).</li>
-                                <li>Gestor de Arranque: El instalador de Ubuntu detectará Windows y configurará automáticamente el Gestor de Arranque GRUB.</li>
+                                <li><strong>Instalar Windows:</strong> Arranca la MV con la ISO de Windows. Durante el particionamiento, debes reducir la partición de Windows para dejar al menos 15-20 GB de espacio SIN ASIGNAR para Ubuntu Server. Finaliza la instalación de Windows.</li>
+                                <li><strong>Instalar Ubuntu Server:</strong> Carga la ISO de Ubuntu. En el paso de particionamiento, elige la opción "Manual".</li>
+                                <li><strong>Particionar Linux:</strong> Utiliza el espacio sin asignar para crear las particiones de Linux: una partición Raíz (/) (formato Ext4) y una partición swap (intercambio).</li>
+                                <li><strong>Gestor de Arranque:</strong> El instalador de Ubuntu detectará Windows y configurará automáticamente el Gestor de Arranque GRUB.</li>
                             </ol>
                             <p>Al finalizar, cuando inicies la MV, el menú GRUB aparecerá para que elijas arrancar Windows o Ubuntu Server.</p>
                         </li>
                     </ol>
                     <img src="./Imagenes/Gemini_Generated_Image_3t0arl3t0arl3t0a.png" alt="Imagen de un monitor en el que se pueden ver ambos sistemas operativos">
                 </article>
+
+                <article class="proyectos-caja">
+                    <h3>Automatización de recuperación de escritorio en Windows</h3>
+                    <p>Al trabajar con configuraciones de monitores múltiples (pantalla extendida), Windows suele desplazar erróneamente los iconos del escritorio al monitor secundario. Esto se debe a conflictos en el <strong>Hot Plug Detect (HPD)</strong> y a la corrupción de las coordenadas guardadas en la caché de iconos del sistema.</p>
+                    <p>El sistema operativo gestiona las imágenes y posiciones de los iconos mediante una base de datos local llamada <strong>IconCache.db</strong>. Cuando hay cambios bruscos de resolución o identificación de hardware (EDID), este archivo deja de sincronizarse correctamente con la pantalla principal configurada.</p>
+                    <p>He desarrollado un script de automatización en Batch que realiza un mantenimiento en caliente del entorno gráfico:</p>
+                   <ol>
+                        <li><strong>Finalización selectiva:</strong> Detiene el proceso explorer.exe para liberar el bloqueo del archivo.</li>
+                        <li><strong>Limpieza de persistencia:</strong> Elimina la base de datos de iconos en <strong><code>%userprofile%\AppData\Local\.</code></strong>
+                        </li>
+                        <li><strong>Restauración del entorno:</strong> Reinicia el Shell de Windows, forzando la regeneración de una caché limpia y el re-posicionado de iconos según la jerarquía de monitores actual.
+                        </li>
+                   </ol>
+                   <p id="codigo">
+                        <code>@echo off
+                        taskkill /f /im explorer.exe
+                        del /a /f /q "%userprofile%\AppData\Local\IconCache.db"
+                        start explorer.exe</code>
+                    </p>
+
+                    <p>El resultado es que dispongo de una solución de soporte técnico nivel 1 que reduce el tiempo de corrección manual de minutos a segundos, <strong>garantizando la integridad visual</strong> del entorno de trabajo del usuario.</p>
+                </article>
+
+
             </div>
         </section>
 

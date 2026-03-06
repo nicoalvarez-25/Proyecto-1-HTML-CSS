@@ -44,7 +44,7 @@ header{
 }
 
 nav{
-    margin-top: 20px;
+    margin-top: 0px;
     /* width: 100%; */
 }
 
@@ -222,6 +222,27 @@ span {
     transform: scale(1.05);
 }
 
+#codigo {
+    background-color: #e0e5ea;
+    border-radius: 7px;
+    padding: 10px;
+    border-left: 5px solid var(--color-secundario);
+    font-weight: bold;
+    transition: transform 0.5s;
+}
+
+#codigo:hover {
+    transform: scale(1.03);
+}
+
+code{
+    font-size: large;
+}
+
+ol li::marker {
+    font-weight: bold;
+}
+
                         /* CONTACTO Y FORMULARIO */
 
 .formulario {
@@ -315,6 +336,35 @@ footer {
     margin-bottom: 20px
 }
 
+/* media querys */
+
+@media screen and (min-width: 768px) {
+
+    header {
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+    }
+
+    .contenedor-sobre-mi{
+        flex-direction: row;
+    }
+
+    .contenedor-habilidades {
+        flex-direction: row;
+    }
+
+    .habilidades-caja {
+        flex: 1;
+    }
+
+    
 
 
-/* mejorar "habilidades" hacer tipo "ul", poner un proyecto más, mirar espaciado letras, transformacion colores nav y enlaces, querys */
+
+    /* repasar texto "formacion" ver mejor como ponerlo, mirar si poner poryectos en cuadricula o dejar así, o cambiar fotos al lado etc */
+
+
+
+
+}
