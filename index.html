@@ -31,6 +31,8 @@
 
     <main>
 
+                                 <!-- SOBRE MI -->
+
         <section id="sobre-mi">
             <h2 class="titulos">Sobre mí</h2>
             <div class="contenedor-sobre-mi">
@@ -49,6 +51,8 @@
                 </figure>
             </div>
         </section>
+
+                                    <!-- HABILIDADES -->
 
         <section id="habilidades">
             <h2 class="titulos">Habilidades</h2>
@@ -84,19 +88,23 @@
 
         </section>
 
+                            <!-- FORMACIÓN -->
+
         <section id="formacion">
             <h2 class="formacion">Formación</h2>
             <div class="contenedor-formacion">
                 <ul>
-                    <li>Bachillerato de Ciencias Sociales
-                        IES Ánxel Fole 
-                        2018 - 2020</li>
-                    <li>Ciclo Superior de Administración de Sistemas Informáticos en Red (ASIR)
-                        Prometeo, Modalidad online
-                        2025 - Actualidad</li>
+                    <li><strong>Bachillerato de Ciencias Sociales</strong></li>
+                    <p>IES Ánxel Fole</p>
+                    <p class="p-fecha">2018-2020</p>
+                    <li><strong>Ciclo Superior de Administración de Sistemas Informáticos en Red (ASIR)</strong></li>
+                    <p>Prometeo, Modalidad online</p>
+                    <p>2025 - Actualidad</p>
                 </ul>
             </div>
         </section>  
+
+                                <!-- PROYECTOS -->
 
         <section id="proyectos">
             <h2 class="titulos">Proyectos</h2>
@@ -112,8 +120,12 @@
 
                 <article class="proyectos-caja">
                     <h3>Recuperar contraseña de usuario de Windows</h3>
-                    <p>Esta metodología se basa en sustituir el archivo de <strong>Teclas Adhesivas (sethc.exe)</strong> por la <strong>Terminal de Comandos (cmd.exe)</strong> para lograr ejecutar comandos antes del inicio de sesión. El procedimiento inicia accediendo a las <strong>Opciones Avanzadas</strong> de la ventana de Recuperación de Windows para abrir la terminal. Desde ahí, se usa el Bloc de Notas para navegar a la ruta <strong><code>C:\Windows\System32</code></strong>. En esta ubicación, se localiza el archivo sethc.exe y se le cambia el nombre a sethc.bak (copia de seguridad). Inmediatamente, se localiza cmd.exe, se copia y la copia se renombra como sethc.exe.</p> 
-                    <p>Al salir y reiniciar el sistema, el usuario debe pulsar la tecla <strong>Shift</strong> cinco veces en la pantalla de inicio de sesión. Esto abrirá la terminal (gracias a la sustitución). Finalmente, se utiliza el comando <strong><code>net user</code></strong> [NombreDeUsuario] [NuevaContraseña] para cambiar la contraseña del usuario sin necesidad de ingresar al sistema.</p>
+                    <p>
+                    Esta metodología se basa en sustituir el archivo de <strong>Teclas Adhesivas (sethc.exe)</strong> por la <strong>Terminal de Comandos (cmd.exe)</strong> para lograr ejecutar comandos antes del inicio de sesión. El procedimiento inicia accediendo a las <strong>Opciones Avanzadas</strong> de la ventana de Recuperación de Windows para abrir la terminal. Desde ahí, se usa el Bloc de Notas para navegar a la ruta <strong><code>C:\Windows\System32</code></strong>. En esta ubicación, se localiza el archivo sethc.exe y se le cambia el nombre a sethc.bak (copia de seguridad). Inmediatamente, se localiza cmd.exe, se copia y la copia se renombra como sethc.exe.
+                    </p> 
+                    <p>
+                    Al salir y reiniciar el sistema, el usuario debe pulsar la tecla <strong>Shift</strong> cinco veces en la pantalla de inicio de sesión. Esto abrirá la terminal (gracias a la sustitución). Finalmente, se utiliza el comando <strong><code>net user</code></strong> [NombreDeUsuario] [NuevaContraseña] para cambiar la contraseña del usuario sin necesidad de ingresar al sistema.
+                    </p>
 
                     <div class="enlace-video">
                         <p><a href="https://www.youtube.com/embed/ynFVtiI4agc" target="_blank">Enlace a Youtube</a></p>
@@ -124,7 +136,7 @@
                     <h3>Instalar ubuntu server y windows en la misma máquina virtual</h3>
                     <ol>
                         <li><h4>Configuración de la MV</h4></li>
-                        <p>Crea una sola MV con las siguientes especificaciones: RAM: 4 GB, CPU: 2 procesadores y un Disco Duro de 40 GB (VDI).</p></li>
+                        <p>Crea una sola MV con las siguientes especificaciones: RAM: 4 GB, CPU: 2 procesadores y un Disco Duro de 40 GB (VDI).</p>
                         <li><h4>Proceso de Instalación</h4></li>
                             <p>Se recomienda instalar Windows primero porque su gestor de arranque es menos flexible que el de Linux:</p>
                             <ol>
@@ -151,19 +163,19 @@
                         <li><strong>Restauración del entorno:</strong> Reinicia el Shell de Windows, forzando la regeneración de una caché limpia y el re-posicionado de iconos según la jerarquía de monitores actual.
                         </li>
                    </ol>
-                   <p id="codigo">
-                        <code>@echo off
-                        taskkill /f /im explorer.exe
-                        del /a /f /q "%userprofile%\AppData\Local\IconCache.db"
-                        start explorer.exe</code>
-                    </p>
-
+                   <pre id="codigo"><code> @echo off
+                    taskkill /f /im explorer.exe
+                    del /a /f /q "%userprofile%\AppData\Local\IconCache.db"
+                    start explorer.exe</code></pre>
+                    
                     <p>El resultado es que dispongo de una solución de soporte técnico nivel 1 que reduce el tiempo de corrección manual de minutos a segundos, <strong>garantizando la integridad visual</strong> del entorno de trabajo del usuario.</p>
                 </article>
 
 
             </div>
         </section>
+
+                               <!-- CONTACTO -->
 
         <section id="contacto">
             <h2 class="titulos">Contacto</h2>
@@ -215,12 +227,6 @@
                     <li><a href="https://github.com/nicoalvarez-25" target="_blank">GitHub</a></li>
                     <li><a href="#" target="_blank">LinkedIn</a></li>
                 </ul>
-
-
-
-
-                <!-- <p><a href="https://github.com/nicoalvarez-25" target="_blank">GitHub</a></p>
-                <p><a href="#" target="_blank">LinkedIn</a></p> -->
             </div>
             <p>© 2026 Nicolás Álvarez Rivas | Todos los derechos reservados.</p>
         </div>

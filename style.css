@@ -143,17 +143,20 @@ span {
     font-weight: normal;
 }
 
-/* seccion formacion */
+                        /* seccion formacion */
 
 .contenedor-formacion ul{
     margin-left: 30px;
     list-style: square;
 }
 
-.contenedor-formacion li{
-    margin-bottom: 15px;
+.contenedor-formacion p{
+    font-style: italic;
 }
 
+.p-fecha {
+    margin-bottom: 15px;
+}
 
                          /* SECCION PROYECTOS */
 
@@ -179,6 +182,7 @@ span {
     padding: 20px;
     border-radius: 7px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.21);
+    min-width: 0;
 }
 
 .proyectos-caja h3 {
@@ -229,6 +233,11 @@ span {
     border-left: 5px solid var(--color-secundario);
     font-weight: bold;
     transition: transform 0.5s;
+
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre-line;
 }
 
 #codigo:hover {
@@ -358,13 +367,21 @@ footer {
         flex: 1;
     }
 
+}
+    
+@media screen and (min-width: 1030px) {
+
+     .contenedor-proyectos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
     
 
 
 
-    /* repasar texto "formacion" ver mejor como ponerlo, mirar si poner poryectos en cuadricula o dejar así, o cambiar fotos al lado etc */
+
+    /*  añadir loguito arriba del navegador, revisar en general, variables colores */
 
 
 
 
-}
