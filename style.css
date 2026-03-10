@@ -161,6 +161,10 @@ span {
     margin-bottom: 15px;
 }
 
+.instituto {
+    list-style: none;
+}
+
                          /* SECCION PROYECTOS */
 
 .contenedor-proyectos{
