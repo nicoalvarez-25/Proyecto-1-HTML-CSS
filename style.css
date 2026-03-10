@@ -3,6 +3,7 @@
     --color-texto: #3b3351; 
     --color-primario: #2c3e50;
     --color-secundario: #2f9ae2;
+    --color-fondotexto: rgb(254, 252, 252); 
     --fuente-principal: 'Roboto', sans-serif;
 }
 
@@ -19,10 +20,11 @@ body{
     line-height: 1.7;
 }
 
+                                    /* HEADER */
 
 header{
     background-color: var(--color-primario);
-    color: white;
+    color: var(--color-fondotexto);
     display: flex;
     flex-direction: column;
     justify-content:space-around;
@@ -45,7 +47,6 @@ header{
 
 nav{
     margin-top: 0px;
-    /* width: 100%; */
 }
 
 #navega1{
@@ -58,7 +59,7 @@ nav{
 }
 
 .navega2{
-    color: white;
+    color: var(--color-fondotexto);
     text-decoration: none;
     padding: 5px 10px;
     transition: color 0.5s;
@@ -66,7 +67,6 @@ nav{
 
 .navega2:hover {
     color: orange;
-    /* color: var(--color-secundario); */
 }
 
 section{
@@ -94,7 +94,6 @@ section{
 .imagen-sobre-mi img{
     border-radius: 7px;
     max-width: 250px;
-    /* border: 3px solid var(--color-primario); */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -113,7 +112,7 @@ section{
 }
 
 .habilidades-caja{
-    background-color: white;
+    background-color: var(--color-fondotexto);
     padding: 20px;
     border-radius: 7px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.21);
@@ -143,7 +142,7 @@ span {
     font-weight: normal;
 }
 
-                        /* seccion formacion */
+                        /* SECCION FORMACION */
 
 .contenedor-formacion ul{
     margin-left: 30px;
@@ -168,17 +167,10 @@ span {
 
 #fotoapp {
     max-width: 50%;
-    /* height: auto; */
-    /* border-radius: 7px;
-    margin-top: 10px;
-    padding: 10px;
-    display: block;
-    margin: 10px auto 0 auto; */
-   
 }
 
 .proyectos-caja {
-    background-color: white;
+    background-color: var(--color-fondotexto);
     padding: 20px;
     border-radius: 7px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.21);
@@ -212,7 +204,7 @@ span {
 
 .enlace-video a {
     text-decoration: none;
-    color: white;
+    color: var(--color-fondotexto);
     font-weight: bold;
     background-color: var(--color-secundario);
     padding: 15px 15px;
@@ -255,7 +247,7 @@ ol li::marker {
                         /* CONTACTO Y FORMULARIO */
 
 .formulario {
-    background-color: white;
+    background-color: var(--color-fondotexto);
     padding: 30px;
     border-radius: 7px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.21);
@@ -296,7 +288,7 @@ h2:last-of-type {
     border: none;
     border-radius: 4px;
     padding: 15px 30px;
-    color: white;
+    color: var(--color-fondotexto);
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.5s;
@@ -319,14 +311,14 @@ input[type="reset"] {
 
 footer {
     background-color: var(--color-primario);
-    color: white;
+    color: var(--color-fondotexto);
     padding: 40px;
     text-align: center;
 }
 
 .enlaces li, .enlaces a {
     list-style: none;
-    color: white;
+    color: var(--color-fondotexto);
     font-weight: bold;
     text-decoration: none;
 }
@@ -345,7 +337,7 @@ footer {
     margin-bottom: 20px
 }
 
-/* media querys */
+                                    /* MEDIA QUERYS */
 
 @media screen and (min-width: 768px) {
 
@@ -376,11 +368,6 @@ footer {
     }
 }
     
-
-
-
-
-    /*  añadir loguito arriba del navegador, revisar en general, variables colores */
 
 
 

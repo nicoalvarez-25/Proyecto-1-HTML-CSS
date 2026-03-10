@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,8 @@
     <meta name="description" content="Biografía y portafolio de Nicolás Álvarez">
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
-</style>
+    </style>
+    <link rel="icon" href="./Imagenes/logo_web.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <title>Portfolio Nicolás Álvarez Rivas</title>
 </head>
@@ -94,12 +95,16 @@
             <h2 class="formacion">Formación</h2>
             <div class="contenedor-formacion">
                 <ul>
-                    <li><strong>Bachillerato de Ciencias Sociales</strong></li>
-                    <p>IES Ánxel Fole</p>
-                    <p class="p-fecha">2018-2020</p>
+                    <li><strong>Bachillerato de Ciencias Sociales</strong></li> 
+                    <li>
+                        <p>IES Ánxel Fole</p>
+                        <p class="p-fecha">2018-2020</p>
+                    </li>
                     <li><strong>Ciclo Superior de Administración de Sistemas Informáticos en Red (ASIR)</strong></li>
-                    <p>Prometeo, Modalidad online</p>
-                    <p>2025 - Actualidad</p>
+                    <li>
+                        <p>Prometeo, Modalidad online</p>
+                        <p>2025 - Actualidad</p>
+                    </li>
                 </ul>
             </div>
         </section>  
@@ -115,7 +120,7 @@
                     <p>
                         VendingSwap es una aplicación web y móvil para comprar y vender máquinas de vending usadas. Pensada para ser fácil de usar, detrás hay una base sólida que la hace segura y rápida, gracias a conceptos clave de ASIR. Funciona sobre servidores estables, usa bases de datos eficientes para guardar toda la información y protege tus datos con buena seguridad.
                     </p>
-                    <img src="./Imagenes/interfaz app compra-venta.png" alt="interfaz de la app para comprar y vender máquinas de segunda mano" id="fotoapp">
+                    <img src="./Imagenes/interfaz_app_compra-venta.png" alt="interfaz de la app para comprar y vender máquinas de segunda mano" id="fotoapp">
                 </article>
 
                 <article class="proyectos-caja">
@@ -135,10 +140,14 @@
                 <article class="proyectos-caja">
                     <h3>Instalar ubuntu server y windows en la misma máquina virtual</h3>
                     <ol>
-                        <li><h4>Configuración de la MV</h4></li>
-                        <p>Crea una sola MV con las siguientes especificaciones: RAM: 4 GB, CPU: 2 procesadores y un Disco Duro de 40 GB (VDI).</p>
-                        <li><h4>Proceso de Instalación</h4></li>
+                        <li>
+                            <h4>Configuración de la MV</h4>
+                            <p>Crea una sola MV con las siguientes especificaciones: RAM: 4 GB, CPU: 2 procesadores y un Disco Duro de 40 GB (VDI).</p>
+                        </li>
+                        <li>
+                            <h4>Proceso de Instalación</h4>
                             <p>Se recomienda instalar Windows primero porque su gestor de arranque es menos flexible que el de Linux:</p>
+                        
                             <ol>
                                 <li><strong>Instalar Windows:</strong> Arranca la MV con la ISO de Windows. Durante el particionamiento, debes reducir la partición de Windows para dejar al menos 15-20 GB de espacio SIN ASIGNAR para Ubuntu Server. Finaliza la instalación de Windows.</li>
                                 <li><strong>Instalar Ubuntu Server:</strong> Carga la ISO de Ubuntu. En el paso de particionamiento, elige la opción "Manual".</li>
@@ -182,7 +191,7 @@
             <div class="contenedor-contacto">
                 <p>Puedes contactarme a través del siguiente formulario:</p>
 
-                <form action="" class="formulario">
+                <form action="/" class="formulario">
 
                     <div class="grupo-inputs">
                         <label for="nombre">Nombre:</label>
